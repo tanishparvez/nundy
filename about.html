@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Nundys</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#FF4B4B",
+                        secondary: "#FF6B6B",
+                    },
+                    borderRadius: {
+                        none: "0px",
+                        sm: "4px",
+                        DEFAULT: "8px",
+                        md: "12px",
+                        lg: "16px",
+                        xl: "20px",
+                        "2xl": "24px",
+                        "3xl": "32px",
+                        full: "9999px",
+                        button: "8px",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <header class="fixed w-full top-0 z-50 bg-white shadow-sm">
+        <nav class="container mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="/" class="font-['Pacifico'] text-primary text-3xl">logo</a>
+            <div class="flex items-center space-x-8">
+                <a href="/" class="text-gray-900 hover:text-primary">Home</a>
+                <a href="about.html" class="text-primary">About</a>
+                <a href="/products" class="text-gray-900 hover:text-primary">Products</a>
+                <a href="/contact" class="text-gray-900 hover:text-primary">Contact</a>
+                <a href="/careers" class="text-gray-900 hover:text-primary">Careers</a>
+                <button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-opacity-90">
+                    Get Started
+                </button>
+            </div>
+        </nav>
+    </header>
+
+<main class="pt-20">
+        <section class="relative h-[400px] overflow-hidden"
+            style="background-image: url('https://readdy.ai/api/search-image?query=modern%20furniture%20showroom%20interior%20with%20elegant%20displays%2C%20natural%20light%2C%20contemporary%20design%20elements%2C%20professional%20and%20welcoming%20atmosphere&width=1920&height=400&seq=7&orientation=landscape'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="container mx-auto px-6 h-full flex items-center relative">
+                <div class="max-w-2xl text-white">
+                    <h1 class="text-5xl font-bold mb-4">Our Story</h1>
+                    <p class="text-xl">
+                        Crafting excellence in furniture manufacturing since 1978
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-2 gap-16 items-center">
+                    <div>
+                        <img src="https://readdy.ai/api/search-image?query=vintage%20furniture%20workshop%20from%201978%2C%20craftsmen%20working%20on%20wooden%20furniture%2C%20historical%20manufacturing%20scene%20with%20authentic%20details&width=600&height=400&seq=8&orientation=landscape"
+                            alt="Our History" class="w-full rounded-lg shadow-lg" />
+                    </div>
+                    <div>
+                        <h2 class="text-4xl font-bold text-gray-900 mb-6">
+                            Our Heritage
+                        </h2>
+                        <p class="text-gray-600 mb-6">
+                            Founded in 1978, Nundys began as a small workshop in Kolkata
+                            with a vision to revolutionize the furniture manufacturing
+                            industry. Our founder, Mr. Rajesh Nundy, believed in combining
+                            traditional craftsmanship with modern technology to create
+                            furniture that would stand the test of time.
+                        </p>
+                        <p class="text-gray-600">
+                            Today, we've grown into one of India's leading furniture
+                            manufacturers, serving clients across various sectors while
+                            maintaining our commitment to quality and innovation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gray-50 py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Values</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        The principles that guide us in creating exceptional furniture
+                        solutions
+                    </p>
+                </div>
+                <div class="grid grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-sm">
+                        <div
+                            class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-lg mb-6">
+                            <i class="ri-heart-line text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">
+                            Passion for Excellence
+                        </h3>
+                        <p class="text-gray-600">
+                            We pour our heart into every piece we create, ensuring the
+                            highest standards of quality and craftsmanship.
+                        </p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-sm">
+                        <div
+                            class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-lg mb-6">
+                            <i class="ri-leaf-line text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">
+                            Sustainability
+                        </h3>
+                        <p class="text-gray-600">
+                            Committed to eco-friendly practices and sustainable
+                            manufacturing processes.
+                        </p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-sm">
+                        <div
+                            class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-lg mb-6">
+                            <i class="ri-group-line text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">
+                            Customer Focus
+                        </h3>
+                        <p class="text-gray-600">
+                            Your satisfaction is our priority. We work closely with clients
+                            to understand and meet their needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                        Our Leadership
+                    </h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        Meet the team driving innovation in furniture manufacturing
+                    </p>
+                </div>
+                <div class="grid grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="mb-4 relative">
+                            <img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20Indian%20male%20executive%20in%20his%2050s%20wearing%20a%20business%20suit%2C%20confident%20and%20approachable%20expression&width=300&height=300&seq=9&orientation=squarish"
+                                alt="Rajesh Nundy" class="w-full h-64 object-cover rounded-lg" />
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Rajesh Nundy</h3>
+                        <p class="text-gray-600">Founder & Chairman</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="mb-4">
+                            <img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20Indian%20female%20executive%20in%20her%2040s%20wearing%20business%20attire%2C%20warm%20and%20professional%20expression&width=300&height=300&seq=10&orientation=squarish"
+                                alt="Priya Mehta" class="w-full h-64 object-cover rounded-lg" />
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Priya Mehta</h3>
+                        <p class="text-gray-600">CEO</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="mb-4">
+                            <img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20Indian%20male%20executive%20in%20his%2040s%20wearing%20business%20casual%20attire%2C%20innovative%20and%20creative%20expression&width=300&height=300&seq=11&orientation=squarish"
+                                alt="Arun Kumar" class="w-full h-64 object-cover rounded-lg" />
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Arun Kumar</h3>
+                        <p class="text-gray-600">Head of Design</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="mb-4">
+                            <img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20Indian%20female%20executive%20in%20her%2030s%20wearing%20modern%20business%20attire%2C%20tech-savvy%20and%20confident%20expression&width=300&height=300&seq=12&orientation=squarish"
+                                alt="Ritu Sharma" class="w-full h-64 object-cover rounded-lg" />
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Ritu Sharma</h3>
+                        <p class="text-gray-600">Head of Operations</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gray-50 py-20">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">
+                        Join Our Journey
+                    </h2>
+                    <p class="text-gray-600 mb-8">
+                        Be part of our mission to create exceptional furniture solutions
+                    </p>
+                    <button class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-opacity-90">
+                        View Career Opportunities
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-4 gap-8">
+                <div>
+                    <a href="/" class="font-['Pacifico'] text-3xl text-white mb-6 block">logo</a>
+                    <p class="text-gray-400">
+                        Leading manufacturer of modern furniture since 1978
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white">Products</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white">Quality Assurance</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400">123 Furniture Street</li>
+                        <li class="text-gray-400">Kolkata, West Bengal</li>
+                        <li class="text-gray-400">Phone: +91 1234567890</li>
+                        <li class="text-gray-400">Email: info@nundys.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">
+                        Stay updated with our latest products and news
+                    </p>
+                    <div class="flex">
+                        <input type="email" placeholder="Enter your email"
+                            class="flex-1 px-4 py-2 !rounded-button rounded-r-none text-gray-900" />
+                        <button class="bg-primary px-6 py-2 !rounded-button rounded-l-none hover:bg-opacity-90">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Nundys. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

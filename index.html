@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nundys - Modern Furniture Manufacturer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#FF4B4B",
+                        secondary: "#FF6B6B",
+                    },
+                    borderRadius: {
+                        none: "0px",
+                        sm: "4px",
+                        DEFAULT: "8px",
+                        md: "12px",
+                        lg: "16px",
+                        xl: "20px",
+                        "2xl": "24px",
+                        "3xl": "32px",
+                        full: "9999px",
+                        button: "8px",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 40%, rgba(255, 255, 255, 0) 100%);
+        }
+
+        /* Mobile-first navigation styles */
+        .nav-links {
+            display: none;
+        }
+        .nav-links.active {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 40;
+        }
+        .hamburger {
+            display: block;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+                flex-direction: row;
+                position: static;
+                background: none;
+                padding: 0;
+                box-shadow: none;
+            }
+            .hamburger {
+                display: none;
+            }
+        }
+
+        /* Ensure logo container doesn’t clip */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            overflow: visible;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <header class="fixed w-full top-0 z-50 bg-white shadow-sm">
+        <nav class="container mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
+            <a href="/" class="logo-container">
+                <!-- Optimized logo size for all screens -->
+                <img src="./Image/logo.png"
+                     alt="Nundys Logo"
+                     class="h-12 sm:h-16 md:h-20 w-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] object-contain"
+                     onerror="this.src='https://via.placeholder.com/240x80?text=Nundys+Logo';"
+                     loading="lazy" />
+            </a>
+
+            <!-- Hamburger menu -->
+            <button class="hamburger text-gray-900 text-2xl focus:outline-none">
+                <i class="ri-menu-line"></i>
+            </button>
+
+            <div class="nav-links items-center space-y-2 md:space-y-0 md:space-x-6 md:flex">
+                <a href="/" class="text-gray-900 hover:text-primary text-sm md:text-base">Home</a>
+                <a href="about.html" class="text-gray-900 hover:text-primary text-sm md:text-base">About</a>
+                <a href="/products" class="text-gray-900 hover:text-primary text-sm md:text-base">Products</a>
+                <a href="/contact" class="text-gray-900 hover:text-primary text-sm md:text-base">Contact</a>
+                <a href="/careers" class="text-gray-900 hover:text-primary text-sm md:text-base">Careers</a>
+                <button class="bg-primary text-white px-4 md:px-6 py-2 !rounded-button hover:bg-opacity-90 text-sm md:text-base w-full md:w-auto">
+                    Get Started
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main class="pt-16 sm:pt-20 md:pt-24">
+        <section class="relative h-[400px] sm:h-[500px] md:h-[600px] overflow-hidden"
+            style="background-image: url('https://readdy.ai/api/search-image?query=modern%20minimalist%20office%20interior%20with%20sleek%20furniture%2C%20natural%20light%20streaming%20through%20large%20windows%2C%20clean%20lines%20and%20contemporary%20design%20elements%2C%20muted%20color%20palette%20with%20subtle%20red%20accents%2C%20professional%20workspace%20environment%20with%20elegant%20furnishings&width=1920&height=600&seq=1&orientation=landscape'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 hero-gradient"></div>
+            <div class="container mx-auto px-4 sm:px-6 h-full flex items-center">
+                <div class="max-w-full sm:max-w-2xl">
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+                        Crafting Modern Furniture Excellence Since 1978
+                    </h1>
+                    <p class="text-base sm:text-lg md:text-xl text-gray-700 mb-6 sm:mb-8">
+                        Leading manufacturer of contemporary furniture solutions for
+                        style-conscious customers worldwide.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-6 sm:mb-8">
+                        <div class="bg-white bg-opacity-90 p-3 sm:p-4 rounded-lg text-center">
+                            <div class="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-2">150+</div>
+                            <div class="text-gray-600 text-xs sm:text-sm md:text-base">Offices Furnished</div>
+                        </div>
+                        <div class="bg-white bg-opacity-90 p-3 sm:p-4 rounded-lg text-center">
+                            <div class="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-2">50+</div>
+                            <div class="text-gray-600 text-xs sm:text-sm md:text-base">Educational Institutions</div>
+                        </div>
+                        <div class="bg-white bg-opacity-90 p-3 sm:p-4 rounded-lg text-center">
+                            <div class="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-2">15M+</div>
+                            <div class="text-gray-600 text-xs sm:text-sm md:text-base">Sq. Ft. Furnished</div>
+                        </div>
+                        <div class="bg-white bg-opacity-90 p-3 sm:p-4 rounded-lg text-center">
+                            <div class="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-2">100+</div>
+                            <div class="text-gray-600 text-xs sm:text-sm md:text-base">Repeat Clients</div>
+                        </div>
+                    </div>
+                    <button class="bg-primary text-white px-4 sm:px-6 md:px-8 py-2 sm:py-3 !rounded-button hover:bg-opacity-90 text-sm sm:text-base">
+                        Explore Products
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="py-12 sm:py-16 md:py-20 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-8 sm:mb-12 md:mb-16">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
+                        Our Product Categories
+                    </h2>
+                    <p class="text-gray-600 max-w-full sm:max-w-2xl mx-auto text-sm sm:text-base">
+                        Discover our comprehensive range of furniture solutions designed
+                        for various environments
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <div class="h-40 sm:h-48 relative">
+                            <img src="https://readdy.ai/api/search-image?query=modern%20molded%20plastic%20chairs%20and%20tables%20in%20cafeteria%20setting%2C%20clean%20and%20minimalist%20design%2C%20bright%20and%20airy%20space%2C%20contemporary%20furniture%20arrangement&width=400&height=300&seq=2&orientation=landscape"
+                                alt="Moulded Furniture" class="w-full h-full object-cover" loading="lazy" />
+                        </div>
+                        <div class="p-4 sm:p-6">
+                            <h3 class="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-2">
+                                Moulded Furniture
+                            </h3>
+                            <p class="text-gray-600 mb-4 text-xs sm:text-sm md:text-base">
+                                Perfect for auditoriums, cafeterias, and restaurants
+                            </p>
+                            <a href="#" class="text-primary hover:text-secondary flex items-center text-xs sm:text-sm md:text-base">
+                                Learn More
+                                <i class="ri-arrow-right-line ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <div class="h-40 sm:h-48 relative">
+                            <img src="https://readdy.ai/api/search-image?query=modern%20office%20workspace%20with%20ergonomic%20chairs%20and%20sleek%20desks%2C%20professional%20corporate%20environment%2C%20contemporary%20office%20furniture%20arrangement&width=400&height=300&seq=3&orientation=landscape"
+                                alt="Office Furniture" class="w-full h-full object-cover" loading="lazy" />
+                        </div>
+                        <div class="p-4 sm:p-6">
+                            <h3 class="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-2">
+                                Office Furniture
+                            </h3>
+                            <p class="text-gray-600 mb-4 text-xs sm:text-sm md:text-base">
+                                Ergonomic solutions for modern workspaces
+                            </p>
+                            <a href="#" class="text-primary hover:text-secondary flex items-center text-xs sm:text-sm md:text-base">
+                                Learn More
+                                <i class="ri-arrow-right-line ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <div class="h-40 sm:h-48 relative">
+                            <img src="https://readdy.ai/api/search-image?query=modern%20educational%20classroom%20with%20comfortable%20student%20desks%20and%20chairs%2C%20bright%20learning%20environment%2C%20contemporary%20educational%20furniture%20setup&width=400&height=300&seq=4&orientation=landscape"
+                                alt="Educational Furniture" class="w-full h-full object-cover" loading="lazy" />
+                        </div>
+                        <div class="p-4 sm:p-6">
+                            <h3 class="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-2">
+                                Educational Furniture
+                            </h3>
+                            <p class="text-gray-600 mb-4 text-xs sm:text-sm md:text-base">
+                                Designed for modern learning environments
+                            </p>
+                            <a href="#" class="text-primary hover:text-secondary flex items-center text-xs sm:text-sm md:text-base">
+                                Learn More
+                                <i class="ri-arrow-right-line ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <div class="h-40 sm:h-48 relative">
+                            <img src="https://readdy.ai/api/search-image?query=modern%20hospital%20room%20with%20specialized%20medical%20furniture%2C%20clean%20and%20sterile%20environment%2C%20contemporary%20healthcare%20furniture%20setup&width=400&height=300&seq=5&orientation=landscape"
+                                alt="Hospital Furniture" class="w-full h-full object-cover" loading="lazy" />
+                        </div>
+                        <div class="p-4 sm:p-6">
+                            <h3 class="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-2">
+                                Hospital Furniture
+                            </h3>
+                            <p class="text-gray-600 mb-4 text-xs sm:text-sm md:text-base">
+                                Specialized solutions for healthcare facilities
+                            </p>
+                            <a href="#" class="text-primary hover:text-secondary flex items-center text-xs sm:text-sm md:text-base">
+                                Learn More
+                                <i class="ri-arrow-right-line ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-12 sm:py-16 md:py-20">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center">
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
+                            Quality That Speaks For Itself
+                        </h2>
+                        <p class="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base">
+                            Our commitment to excellence is reflected in every piece we
+                            create. With state-of-the-art manufacturing facilities and
+                            rigorous quality control processes, we ensure that each product
+                            meets the highest standards of durability and design.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                            <div class="flex items-start space-x-3 sm:space-x-4">
+                                <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-lg">
+                                    <i class="ri-shield-check-line text-lg sm:text-xl text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-900 mb-1 text-sm sm:text-base">Quality Tested</h3>
+                                    <p class="text-gray-600 text-xs sm:text-sm">Every product undergoes rigorous testing</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3 sm:space-x-4">
+                                <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-lg">
+                                    <i class="ri-recycle-line text-lg sm:text-xl text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-900 mb-1 text-sm sm:text-base">Sustainable</h3>
+                                    <p class="text-gray-600 text-xs sm:text-sm">Eco-friendly manufacturing process</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3 sm:space-x-4">
+                                <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-lg">
+                                    <i class="ri-tools-line text-lg sm:text-xl text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-900 mb-1 text-sm sm:text-base">Advanced Tech</h3>
+                                    <p class="text-gray-600 text-xs sm:text-sm">Modern machinery and tools</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3 sm:space-x-4">
+                                <div class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-lg">
+                                    <i class="ri-customer-service-2-line text-lg sm:text-xl text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-900 mb-1 text-sm sm:text-base">Expert Support</h3>
+                                    <p class="text-gray-600 text-xs sm:text-sm">Dedicated customer service</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://readdy.ai/api/search-image?query=modern%20furniture%20manufacturing%20facility%20with%20advanced%20machinery%20and%20quality%20control%20processes%2C%20clean%20and%20organized%20industrial%20space&width=600&height=400&seq=6&orientation=landscape"
+                            alt="Quality Assurance" class="w-full rounded-lg shadow-lg" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-gray-50 py-12 sm:py-16 md:py-20">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="max-w-full sm:max-w-3xl mx-auto text-center">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
+                        Ready to Transform Your Space?
+                    </h2>
+                    <p class="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base">
+                        Get in touch with our experts to discuss your furniture needs
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4">
+                        <button class="bg-primary text-white px-4 sm:px-6 md:px-8 py-2 sm:py-3 !rounded-button hover:bg-opacity-90 text-sm sm:text-base">
+                            Contact Us
+                        </button>
+                        <a href="https://readdy.ai/home/b6dd7322-2efb-4528-a619-9282cecc05a6/af4a81a3-c820-4ef8-aba2-2f1cca1a7f23"
+                            data-readdy="true"
+                            class="border border-primary text-primary px-4 sm:px-6 md:px-8 py-2 sm:py-3 !rounded-button hover:bg-primary hover:text-white inline-block text-sm sm:text-base">View Catalog</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-gray-900 text-white py-10 sm:py-12 lg:py-16">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            <div>
+                <a href="/" class="mb-4 sm:mb-6 block">
+                    <img src="./Image/logo.png" alt="Logo" class="h-10 sm:h-12">
+                </a>
+                <p class="text-gray-400 text-sm sm:text-base">
+                    Leading manufacturer of modern furniture since 1978
+                </p>
+            </div>
+            <div>
+                <h3 class="font-bold mb-3 sm:mb-4 text-base sm:text-lg">Quick Links</h3>
+                <ul class="space-y-2 text-sm sm:text-base">
+                    <li>
+                        <a href="/about" class="text-gray-400 hover:text-white">About Us</a>
+                    </li>
+                    <li>
+                        <a href="/products" class="text-gray-400 hover:text-white">Products</a>
+                    </li>
+                    <li>
+                        <a href="/clientele" class="text-gray-400 hover:text-white">Clientele</a>
+                    </li>
+                    <li>
+                        <a href="/gallery" class="text-gray-400 hover:text-white">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="/contact" class="text-gray-400 hover:text-white">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold mb-3 sm:mb-4 text-base sm:text-lg">Contact</h3>
+                <ul class="space-y-2 text-sm sm:text-base">
+                    <li class="text-gray-400">123 Furniture Street</li>
+                    <li class="text-gray-400">Kolkata, West Bengal</li>
+                    <li class="text-gray-400">Phone: +91 1234567890</li>
+                    <li class="text-gray-400">Email: info@nundys.com</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold mb-3 sm:mb-4 text-base sm:text-lg">Newsletter</h3>
+                <p class="text-gray-400 text-sm sm:text-base mb-3 sm:mb-4">
+                    Stay updated with our latest products and news
+                </p>
+                <div class="flex flex-col sm:flex-row">
+                    <input type="email" placeholder="Enter your email"
+                        class="flex-1 px-4 py-2 !rounded-button sm:rounded-r-none text-gray-900 text-sm mb-2 sm:mb-0" />
+                    <button
+                        class="bg-primary px-4 sm:px-6 py-2 !rounded-button sm:rounded-l-none hover:bg-opacity-90 text-sm">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 sm:mt-10 lg:mt-12 pt-6 sm:pt-8 text-center text-gray-400 text-sm">
+            <p>© 2025 Nundys. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

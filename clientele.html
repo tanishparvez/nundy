@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clientele - Nundys</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#FF4B4B",
+                        secondary: "#FF6B6B",
+                    },
+                    borderRadius: {
+                        none: "0px",
+                        sm: "4px",
+                        DEFAULT: "8px",
+                        md: "12px",
+                        lg: "16px",
+                        xl: "20px",
+                        "2xl": "24px",
+                        "3xl": "32px",
+                        full: "9999px",
+                        button: "8px",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <header class="fixed w-full top-0 z-50 bg-white shadow-sm">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            <a href="/" class="font-['Pacifico'] text-primary text-2xl sm:text-3xl">logo</a>
+            <div class="hidden md:flex items-center space-x-4 lg:space-x-8">
+                <a href="/" class="text-gray-900 hover:text-primary text-sm lg:text-base">Home</a>
+                <a href="/about" class="text-gray-900 hover:text-primary text-sm lg:text-base">About</a>
+                <a href="/products" class="text-gray-900 hover:text-primary text-sm lg:text-base">Products</a>
+                <a href="/clientele" class="text-primary text-sm lg:text-base">Clientele</a>
+                <a href="/contact" class="text-gray-900 hover:text-primary text-sm lg:text-base">Contact</a>
+                <a href="/careers" class="text-gray-900 hover:text-primary text-sm lg:text-base">Careers</a>
+                <button class="bg-primary text-white px-4 py-1.5 sm:px-6 sm:py-2 !rounded-button hover:bg-opacity-90 text-sm">
+                    Get Started
+                </button>
+            </div>
+            <button class="md:hidden text-gray-900 text-2xl" id="menu-toggle">
+                <i class="ri-menu-line"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-sm">
+            <div class="flex flex-col items-center space-y-4 py-4">
+                <a href="/" class="text-gray-900 hover:text-primary text-base">Home</a>
+                <a href="/about" class="text-gray-900 hover:text-primary text-base">About</a>
+                <a href="/products" class="text-gray-900 hover:text-primary text-base">Products</a>
+                <a href="/clientele" class="text-primary text-base">Clientele</a>
+                <a href="/contact" class="text-gray-900 hover:text-primary text-base">Contact</a>
+                <a href="/careers" class="text-gray-900 hover:text-primary text-base">Careers</a>
+                <button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 text-sm">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-16 sm:pt-20">
+        <section class="relative h-[200px] sm:h-[300px] lg:h-[400px] overflow-hidden"
+            style="background-image: url('https://readdy.ai/api/search-image?query=modern%20office%20with%20clients%20and%20furniture%2C%20professional%20collaboration%2C%20welcoming%20environment&width=1920&height=400&seq=7&orientation=landscape'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center relative">
+                <div class="max-w-full sm:max-w-2xl text-white">
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4">Our Clientele</h1>
+                    <p class="text-base sm:text-lg lg:text-xl">
+                        Building lasting partnerships through exceptional furniture solutions
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-10 sm:py-16 lg:py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8 sm:mb-12 lg:mb-16">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-4">Our Valued Clients</h2>
+                    <p class="text-gray-600 text-sm sm:text-base max-w-full sm:max-w-2xl mx-auto">
+                        We are proud to partner with leading organizations across industries, delivering tailored furniture solutions.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+                    <div class="text-center">
+                        <img src="https://readdy.ai/api/search-image?query=company%20logo%20modern%20professional&width=300&height=200&seq=13&orientation=landscape"
+                            alt="Client 1" class="w-full h-24 sm:h-28 lg:h-32 object-contain rounded-lg" />
+                        <h3 class="text-base sm:text-lg font-bold text-gray-900 mt-2 sm:mt-4">TechCorp</h3>
+                    </div>
+                    <div class="text-center">
+                        <img src="https://readdy.ai/api/search-image?query=company%20logo%20hospitality%20industry&width=300&height=200&seq=14&orientation=landscape"
+                            alt="Client 2" class="w-full h-24 sm:h-28 lg:h-32 object-contain rounded-lg" />
+                        <h3 class="text-base sm:text-lg font-bold text-gray-900 mt-2 sm:mt-4">Hotel Elite</h3>
+                    </div>
+                    <div class="text-center">
+                        <img src="https://readdy.ai/api/search-image?query=company%20logo%20retail%20industry&width=300&height=200&seq=15&orientation=landscape"
+                            alt="Client 3" class="w-full h-24 sm:h-28 lg:h-32 object-contain rounded-lg" />
+                        <h3 class="text-base sm:text-lg font-bold text-gray-900 mt-2 sm:mt-4">Retail Hub</h3>
+                    </div>
+                    <div class="text-center">
+                        <img src="https://readdy.ai/api/search-image?query=company%20logo%20education%20sector&width=300&height=200&seq=16&orientation=landscape"
+                            alt="Client 4" class="w-full h-24 sm:h-28 lg:h-32 object-contain rounded-lg" />
+                        <h3 class="text-base sm:text-lg font-bold text-gray-900 mt-2 sm:mt-4">EduWorld</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gray-50 py-10 sm:py-16 lg:py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8 sm:mb-12 lg:mb-16">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-4">Testimonials</h2>
+                    <p class="text-gray-600 text-sm sm:text-base max-w-full sm:max-w-2xl mx-auto">
+                        Hear from our clients about their experience with Nundys
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+                    <div class="bg-white p-4 sm:p-6 lg:p-8 rounded-lg shadow-sm">
+                        <p class="text-gray-600 text-sm sm:text-base mb-4">
+                            "Nundys transformed our office space with their innovative designs and impeccable quality. Their team was a pleasure to work with!"
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20business%20professional&width=50&height=50&seq=17&orientation=squarish"
+                                alt="Client 1" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full mr-3 sm:mr-4" />
+                            <div>
+                                <h3 class="text-base sm:text-lg font-bold text-gray-900">Anita Desai</h3>
+                                <p class="text-gray-500 text-sm">Director, TechCorp</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 sm:p-6 lg:p-8 rounded-lg shadow-sm">
+                        <p class="text-gray-600 text-sm sm:text-base mb-4">
+                            "The furniture provided by Nundys elevated our hotel's ambiance. Their attention to detail is unmatched."
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20hospitality%20manager&width=50&height=50&seq=18&orientation=squarish"
+                                alt="Client 2" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full mr-3 sm:mr-4" />
+                            <div>
+                                <h3 class="text-base sm:text-lg font-bold text-gray-900">Vikram Singh</h3>
+                                <p class="text-gray-500 text-sm">GM, Hotel Elite</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 sm:p-6 lg:p-8 rounded-lg shadow-sm">
+                        <p class="text-gray-600 text-sm sm:text-base mb-4">
+                            "Working with Nundys was seamless. Their custom solutions perfectly met our retail needs."
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20retail%20manager&width=50&height=50&seq=19&orientation=squarish"
+                                alt="Client 3" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full mr-3 sm:mr-4" />
+                            <div>
+                                <h3 class="text-base sm:text-lg font-bold text-gray-900">Meera Patel</h3>
+                                <p class="text-gray-500 text-sm">Manager, Retail Hub</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-10 sm:py-16 lg:py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8 sm:mb-12 lg:mb-16">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-4">Our Projects</h2>
+                    <p class="text-gray-600 text-sm sm:text-base max-w-full sm:max-w-2xl mx-auto">
+                        Explore some of our signature projects showcasing our craftsmanship and innovation
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+                    <div class="relative">
+                        <img src="https://readdy.ai/api/search-image?query=modern%20office%20furniture%20installation%2C%20sleek%20design&width=400&height=300&seq=20&orientation=landscape"
+                            alt="Project 1" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" />
+                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-3 sm:p-4">
+                            <h3 class="text-base sm:text-lg font-bold text-white">TechCorp Office Fitout</h3>
+                            <p class="text-gray-200 text-sm">Modern office spaces in Mumbai</p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="https://readdy.ai/api/search-image?query=luxury%20hotel%20furniture%2C%20elegant%20design&width=400&height=300&seq=21&orientation=landscape"
+                            alt="Project 2" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" />
+                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-3 sm:p-4">
+                            <h3 class="text-base sm:text-lg font-bold text-white">Hotel Elite Renovation</h3>
+                            <p class="text-gray-200 text-sm">Luxury interiors in Delhi</p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="https://readdy.ai/api/search-image?query=retail%20store%20furniture%2C%20modern%20display&width=400&height=300&seq=22&orientation=landscape"
+                            alt="Project 3" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" />
+                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-3 sm:p-4">
+                            <h3 class="text-base sm:text-lg font-bold text-white">Retail Hub Design</h3>
+                            <p class="text-gray-200 text-sm">Innovative retail spaces in Bangalore</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gray-50 py-10 sm:py-16 lg:py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-full sm:max-w-3xl mx-auto text-center">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">Partner with Us</h2>
+                    <p class="text-gray-600 text-sm sm:text-base mb-6 sm:mb-8">
+                        Let’s create exceptional furniture solutions for your business
+                    </p>
+                    <button class="bg-primary text-white px-6 sm:px-8 py-2 sm:py-3 !rounded-button hover:bg-opacity-90 text-sm sm:text-base">
+                        Contact Us
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-10 sm:py-12 lg:py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                <div>
+                    <a href="/" class="font-['Pacifico'] text-2xl sm:text-3xl text-white mb-4 sm:mb-6 block">logo</a>
+                    <p class="text-gray-400 text-sm sm:text-base">
+                        Leading manufacturer of modern furniture since 1978
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-3 sm:mb-4 text-base sm:text-lg">Quick Links</h3>
+                    <ul class="space-y-2 text-sm sm:text-base">
+                        <li>
+                            <a href="/about" class="text-gray-400 hover:text-white">About Us</a>
+                        </li>
+                        <li>
+                            <a href="/products" class="text-gray-400 hover:text-white">Products</a>
+                        </li>
+                        <li>
+                            <a href="/clientele" class="text-gray-400 hover:text-white">Clientele</a>
+                        </li>
+                        <li>
+                            <a href="/contact" class="text-gray-400 hover:text-white">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-3 sm:mb-4 text-base sm:text-lg">Contact</h3>
+                    <ul class="space-y-2 text-sm sm:text-base">
+                        <li class="text-gray-400">123 Furniture Street</li>
+                        <li class="text-gray-400">Kolkata, West Bengal</li>
+                        <li class="text-gray-400">Phone: +91 1234567890</li>
+                        <li class="text-gray-400">Email: info@nundys.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-3 sm:mb-4 text-base sm:text-lg">Newsletter</h3>
+                    <p class="text-gray-400 text-sm sm:text-base mb-3 sm:mb-4">
+                        Stay updated with our latest products and news
+                    </p>
+                    <div class="flex flex-col sm:flex-row">
+                        <input type="email" placeholder="Enter your email"
+                            class="flex-1 px-4 py-2 !rounded-button sm:rounded-r-none text-gray-900 text-sm mb-2 sm:mb-0" />
+                        <button class="bg-primary px-4 sm:px-6 py-2 !rounded-button sm:rounded-l-none hover:bg-opacity-90 text-sm">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 sm:mt-10 lg:mt-12 pt-6 sm:pt-8 text-center text-gray-400 text-sm">
+                <p>© 2025 Nundys. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

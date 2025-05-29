@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - Nundys</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#FF4B4B",
+                        secondary: "#FF6B6B",
+                    },
+                    borderRadius: {
+                        none: "0px",
+                        sm: "4px",
+                        DEFAULT: "8px",
+                        md: "12px",
+                        lg: "16px",
+                        xl: "20px",
+                        "2xl": "24px",
+                        "3xl": "32px",
+                        full: "9999px",
+                        button: "8px",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        /* Mobile-first navigation */
+        #mobile-menu {
+            display: none;
+        }
+        #mobile-menu.active {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 64px sm:top:80px;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 40;
+        }
+
+        @media (min-width: 768px) {
+            #mobile-menu {
+                display: none !important;
+            }
+            .desktop-nav {
+                display: flex;
+            }
+            #menu-toggle {
+                display: none;
+            }
+        }
+
+        /* Ensure logo container doesn’t clip */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            overflow: visible;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <header class="fixed w-full top-0 z-50 bg-white shadow-sm">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            <a href="./index.html" class="logo-container">
+                <img src="./Image/logo.png"
+                     alt="Nundys Logo"
+                     class="h-12 sm:h-16 md:h-20 w-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] object-contain"
+                     onerror="this.src='https://via.placeholder.com/240x80?text=Nundys+Logo';"
+                     loading="lazy" />
+            </a>
+            <button class="md:hidden text-gray-900 text-2xl focus:outline-none" id="menu-toggle">
+                <i class="ri-menu-line"></i>
+            </button>
+            <div class="desktop-nav hidden md:flex items-center space-x-4 lg:space-x-8">
+                <a href="/" class="text-gray-900 hover:text-primary text-sm lg:text-base">Home</a>
+                <a href="/about" class="text-gray-900 hover:text-primary text-sm lg:text-base">About</a>
+                <a href="/products" class="text-gray-900 hover:text-primary text-sm lg:text-base">Products</a>
+                <a href="/clientele" class="text-gray-900 hover:text-primary text-sm lg:text-base">Clientele</a>
+                <a href="/gallery" class="text-primary text-sm lg:text-base">Gallery</a>
+                <a href="/contact" class="text-gray-900 hover:text-primary text-sm lg:text-base">Contact</a>
+                <a href="/careers" class="text-gray-900 hover:text-primary text-sm lg:text-base">Careers</a>
+                <button class="bg-primary text-white px-4 lg:px-6 py-1.5 lg:py-2 !rounded-button hover:bg-opacity-90 text-sm lg:text-base">
+                    Get Started
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="md:hidden bg-white shadow-sm">
+            <div class="flex flex-col items-center space-y-4 py-4">
+                <a href="/" class="text-gray-900 hover:text-primary text-base">Home</a>
+                <a href="/about" class="text-gray-900 hover:text-primary text-base">About</a>
+                <a href="/products" class="text-gray-900 hover:text-primary text-base">Products</a>
+                <a href="/clientele" class="text-gray-900 hover:text-primary text-base">Clientele</a>
+                <a href="/gallery" class="text-primary text-base">Gallery</a>
+                <a href="/contact" class="text-gray-900 hover:text-primary text-base">Contact</a>
+                <a href="/careers" class="text-gray-900 hover:text-primary text-base">Careers</a>
+                <button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 text-base w-full">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-16 sm:pt-20 md:pt-24">
+        <section class="relative h-[300px] sm:h-[400px] lg:h-[500px] overflow-hidden"
+            style="background-image: url('https://cdn.pixabay.com/photo/2023/12/01/14/09/interior-8423039_1280.jpg'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 hero-gradient"></div>
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center relative">
+                <div class="max-w-full sm:max-w-2xl text-white">
+                    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 sm:mb-4">Our Gallery</h1>
+                    <p class="text-sm sm:text-base lg:text-lg">
+                        Explore our collection of exquisite furniture designs
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-10 sm:py-16 lg:py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8 sm:mb-12 lg:mb-16">
+                    <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-2 sm:mb-4">Furniture Showcase</h2>
+                    <p class="text-gray-600 text-sm sm:text-base max-w-full sm:max-w-2xl mx-auto">
+                        Discover our range of handcrafted furniture, blending tradition with modern innovation.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+                    <div class="relative">
+                        <img src="https://cdn.pixabay.com/photo/2023/08/30/08/07/living-room-8222477_1280.jpg"
+                            alt="Dining Table" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-3 sm:p-4">
+                            <h3 class="text-sm sm:text-base lg:text-lg font-bold text-white">Elegant Dining Table</h3>
+                            <p class="text-gray-200 text-xs sm:text-sm">Crafted with premium oak</p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="https://cdn.pixabay.com/photo/2024/02/13/15/08/living-room-8571037_1280.jpg"
+                            alt="Leather Sofa" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-3 sm:p-4">
+                            <h3 class="text-sm sm:text-base lg:text-lg font-bold text-white">Luxury Leather Sofa</h3>
+                            <p class="text-gray-200 text-xs sm:text-sm">Timeless comfort and style</p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="https://cdn.pixabay.com/photo/2023/06/06/15/37/office-8045230_1280.jpg"
+                            alt="Office Desk" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-3 sm:p-4">
+                            <h3 class="text-sm sm:text-base lg:text-lg font-bold text-white">Minimalist Office Desk</h3>
+                            <p class="text-gray-200 text-xs sm:text-sm">Designed for productivity</p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="https://cdn.pixabay.com/photo/2023/10/02/14/51/living-room-8288936_1280.jpg"
+                            alt="Bookshelf" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-3 sm:p-4">
+                            <h3 class="text-sm sm:text-base lg:text-lg font-bold text-white">Contemporary Bookshelf</h3>
+                            <p class="text-gray-200 text-xs sm:text-sm">Functional elegance</p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="https://cdn.pixabay.com/photo/2023/08/24/15/58/bedroom-8211118_1280.jpg"
+                            alt="Bedroom Set" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-3 sm:p-4">
+                            <h3 class="text-sm sm:text-base lg:text-lg font-bold text-white">Luxury Bedroom Set</h3>
+                            <p class="text-gray-200 text-xs sm:text-sm">Serene and sophisticated</p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="https://cdn.pixabay.com/photo/2023/06/27/10/50/patio-8091929_1280.jpg"
+                            alt="Outdoor Set" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                        <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-3 sm:p-4">
+                            <h3 class="text-sm sm:text-base lg:text-lg font-bold text-white">Outdoor Patio Set</h3>
+                            <p class="text-gray-200 text-xs sm:text-sm">Durable and stylish</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gray-50 py-10 sm:py-16 lg:py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-full sm:max-w-3xl mx-auto text-center">
+                    <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">Explore More</h2>
+                    <p class="text-gray-600 text-sm sm:text-base mb-6 sm:mb-8">
+                        Discover our full range of furniture solutions tailored to your needs
+                    </p>
+                    <button class="bg-primary text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-3 !rounded-button hover:bg-opacity-90 text-sm sm:text-base">
+                        View Products
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-10 sm:py-12 lg:py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                <div>
+                    <a href="/" class="mb-4 sm:mb-6 block">
+                        <img src="./Image/logo.png"
+                             alt="Nundys Logo"
+                             class="h-10 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain"
+                             onerror="this.src='https://via.placeholder.com/160x60?text=Nundys+Logo';"
+                             loading="lazy" />
+                    </a>
+                    <p class="text-gray-400 text-xs sm:text-sm">
+                        Leading manufacturer of modern furniture since 1978
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-3 sm:mb-4 text-sm sm:text-base">Quick Links</h3>
+                    <ul class="space-y-2 text-xs sm:text-sm">
+                        <li><a href="/about" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="/products" class="text-gray-400 hover:text-white">Products</a></li>
+                        <li><a href="/clientele" class="text-gray-400 hover:text-white">Clientele</a></li>
+                        <li><a href="/gallery" class="text-gray-400 hover:text-white">Gallery</a></li>
+                        <li><a href="/contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-3 sm:mb-4 text-sm sm:text-base">Contact</h3>
+                    <ul class="space-y-2 text-xs sm:text-sm">
+                        <li class="text-gray-400">123 Furniture Street</li>
+                        <li class="text-gray-400">Kolkata, West Bengal</li>
+                        <li class="text-gray-400">Phone: +91 1234567890</li>
+                        <li class="text-gray-400">Email: info@nundys.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-3 sm:mb-4 text-sm sm:text-base">Newsletter</h3>
+                    <p class="text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4">
+                        Stay updated with our latest products and news
+                    </p>
+                    <div class="flex flex-col sm:flex-row">
+                        <input type="email" placeholder="Enter your email"
+                            class="flex-1 px-3 sm:px-4 py-2 !rounded-button sm:rounded-r-none text-gray-900 text-xs sm:text-sm mb-2 sm:mb-0" />
+                        <button class="bg-primary px-3 sm:px-4 py-2 !rounded-button sm:rounded-l-none hover:bg-opacity-90 text-xs sm:text-sm">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 sm:mt-10 lg:mt-12 pt-6 sm:pt-8 text-center text-gray-400 text-xs sm:text-sm">
+                <p>© 2025 Nundys. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>
