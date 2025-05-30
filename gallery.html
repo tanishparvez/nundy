@@ -79,40 +79,41 @@
 <body class="bg-white">
     <header class="fixed w-full top-0 z-50 bg-white shadow-sm">
         <nav class="container mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
-            <a href="./index.html" class="logo-container">
-                <img src="./Image/logo.png"
-                     alt="Nundys Logo"
-                     class="h-12 sm:h-16 md:h-20 w-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] object-contain"
-                     onerror="this.src='https://via.placeholder.com/240x80?text=Nundys+Logo';"
-                     loading="lazy" />
+            <a href="/" class="block">
+                <img src="./Image/logo.png" alt="Nundys Logo" class="h-8 sm:h-10 lg:h-12">
             </a>
-            <button class="md:hidden text-gray-900 text-2xl focus:outline-none" id="menu-toggle">
-                <i class="ri-menu-line"></i>
-            </button>
-            <div class="desktop-nav hidden md:flex items-center space-x-4 lg:space-x-8">
-                <a href="/" class="text-gray-900 hover:text-primary text-sm lg:text-base">Home</a>
-                <a href="/about" class="text-gray-900 hover:text-primary text-sm lg:text-base">About</a>
-                <a href="/products" class="text-gray-900 hover:text-primary text-sm lg:text-base">Products</a>
-                <a href="/clientele" class="text-gray-900 hover:text-primary text-sm lg:text-base">Clientele</a>
-                <a href="/gallery" class="text-primary text-sm lg:text-base">Gallery</a>
-                <a href="/contact" class="text-gray-900 hover:text-primary text-sm lg:text-base">Contact</a>
-                <a href="/careers" class="text-gray-900 hover:text-primary text-sm lg:text-base">Careers</a>
-                <button class="bg-primary text-white px-4 lg:px-6 py-1.5 lg:py-2 !rounded-button hover:bg-opacity-90 text-sm lg:text-base">
-                    Get Started
+            <div class="hidden md:flex items-center space-x-4 lg:space-x-8">
+                <a href="./index.html" class="text-gray-900 hover:text-primary text-sm lg:text-base">Home</a>
+                <a href="./about.html" class="text-gray-900 hover:text-primary text-sm lg:text-base">About</a>
+                <a href="./product.html" class="text-gray-900 hover:text-primary text-sm lg:text-base">Products</a>
+                <a href="./clientele.html" class="text-gray-900 hover:text-primary text-sm lg:text-base">Clientele</a>
+                <a href="./gallery.html" class="text-primary text-sm lg:text-base">Gallery</a>
+                <a href="./service.html" class="text-gray-900 hover:text-primary text-sm lg:text-base">Services</a>
+                
+                <a href="./careers.html" class="text-gray-900 hover:text-primary text-sm lg:text-base">Careers</a>
+                <button
+                    class="bg-primary text-white px-4 py-1.5 sm:px-6 sm:py-2 rounded-button hover:bg-opacity-90 text-sm"
+                    onclick="window.location.href='./contact.html'">
+                    Contact Us
                 </button>
             </div>
+            <button class="md:hidden text-gray-900 text-2xl" id="menu-toggle">
+                <i class="ri-menu-line"></i>
+            </button>
         </nav>
-        <div id="mobile-menu" class="md:hidden bg-white shadow-sm">
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-sm">
             <div class="flex flex-col items-center space-y-4 py-4">
-                <a href="/" class="text-gray-900 hover:text-primary text-base">Home</a>
-                <a href="/about" class="text-gray-900 hover:text-primary text-base">About</a>
-                <a href="/products" class="text-gray-900 hover:text-primary text-base">Products</a>
-                <a href="/clientele" class="text-gray-900 hover:text-primary text-base">Clientele</a>
-                <a href="/gallery" class="text-primary text-base">Gallery</a>
-                <a href="/contact" class="text-gray-900 hover:text-primary text-base">Contact</a>
-                <a href="/careers" class="text-gray-900 hover:text-primary text-base">Careers</a>
-                <button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 text-base w-full">
-                    Get Started
+                <a href="./index.html" class="text-gray-900 hover:text-primary text-base">Home</a>
+                <a href="./about.html" class="text-gray-900 hover:text-primary text-base">About</a>
+                <a href="./product.html" class="text-gray-900 hover:text-primary text-base">Products</a>
+                <a href="./clientele.html" class="text-gray-900 hover:text-primary text-base">Clientele</a>
+                <a href="./gallery.html" class="text-primary text-base">Gallery</a>
+                <a href="./service.html" class="text-gray-900 hover:text-primary text-base">Services</a>
+                
+                <a href="./careers.html" class="text-gray-900 hover:text-primary text-base">Careers</a>
+                <button class="bg-primary text-white px-6 py-2 rounded-button hover:bg-opacity-90 text-sm"
+                    onclick="window.location.href='./contact.html'">
+                    Contact Us
                 </button>
             </div>
         </div>
@@ -213,50 +214,60 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
                 <div>
                     <a href="/" class="mb-4 sm:mb-6 block">
-                        <img src="./Image/logo.png"
-                             alt="Nundys Logo"
-                             class="h-10 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain"
-                             onerror="this.src='https://via.placeholder.com/160x60?text=Nundys+Logo';"
-                             loading="lazy" />
+                        <img src="./Image/logo.png" alt="Logo" class="h-10 sm:h-12">
                     </a>
-                    <p class="text-gray-400 text-xs sm:text-sm">
+                    <p class="text-gray-400 text-sm sm:text-base">
                         Leading manufacturer of modern furniture since 1978
                     </p>
                 </div>
                 <div>
-                    <h3 class="font-bold mb-3 sm:mb-4 text-sm sm:text-base">Quick Links</h3>
-                    <ul class="space-y-2 text-xs sm:text-sm">
-                        <li><a href="/about" class="text-gray-400 hover:text-white">About Us</a></li>
-                        <li><a href="/products" class="text-gray-400 hover:text-white">Products</a></li>
-                        <li><a href="/clientele" class="text-gray-400 hover:text-white">Clientele</a></li>
-                        <li><a href="/gallery" class="text-gray-400 hover:text-white">Gallery</a></li>
-                        <li><a href="/contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    <h3 class="font-bold mb-3 sm:mb-4 text-base sm:text-lg">Quick Links</h3>
+                    <ul class="space-y-2 text-sm sm:text-base">
+                        <li>
+                            <a href="./about.html" class="text-gray-400 hover:text-white">About Us</a>
+                        </li>
+                        <li>
+                            <a href="./product.html" class="text-gray-400 hover:text-white">Products</a>
+                        </li>
+                        <li>
+                            <a href="./clientele.html" class="text-gray-400 hover:text-white">Clientele</a>
+                        </li>
+                        <li>
+                            <a href="./gallery.html" class="text-gray-400 hover:text-white">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="./service.html" class="text-gray-400 hover:text-white">Services</a>
+                        </li>
+                        <li>
+                            <a href="./contact.html" class="text-gray-400 hover:text-white">Contact</a>
+                        </li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="font-bold mb-3 sm:mb-4 text-sm sm:text-base">Contact</h3>
-                    <ul class="space-y-2 text-xs sm:text-sm">
+                    <h3 class="font-bold mb-3 sm:mb-4 text-base sm:text-lg">Contact</h3>
+                    <ul class="space-y-2 text-sm sm:text-base">
                         <li class="text-gray-400">123 Furniture Street</li>
                         <li class="text-gray-400">Kolkata, West Bengal</li>
-                        <li class="text-gray-400">Phone: +91 1234567890</li>
-                        <li class="text-gray-400">Email: info@nundys.com</li>
+                        <li class="text-gray-400">Phone: +91 33 2226 9301</li>
+                        <li class="text-gray-400">Email: admin@nundys.com</li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="font-bold mb-3 sm:mb-4 text-sm sm:text-base">Newsletter</h3>
-                    <p class="text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4">
+                    <h3 class="font-bold mb-3 sm:mb-4 text-base sm:text-lg">Newsletter</h3>
+                    <p class="text-gray-400 text-sm sm:text-base mb-3 sm:mb-4">
                         Stay updated with our latest products and news
                     </p>
                     <div class="flex flex-col sm:flex-row">
                         <input type="email" placeholder="Enter your email"
-                            class="flex-1 px-3 sm:px-4 py-2 !rounded-button sm:rounded-r-none text-gray-900 text-xs sm:text-sm mb-2 sm:mb-0" />
-                        <button class="bg-primary px-3 sm:px-4 py-2 !rounded-button sm:rounded-l-none hover:bg-opacity-90 text-xs sm:text-sm">
+                            class="flex-1 px-4 py-2 !rounded-button sm:rounded-r-none text-gray-900 text-sm mb-2 sm:mb-0" />
+                        <button
+                            class="bg-primary px-4 sm:px-6 py-2 !rounded-button sm:rounded-l-none hover:bg-opacity-90 text-sm">
                             Subscribe
                         </button>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-8 sm:mt-10 lg:mt-12 pt-6 sm:pt-8 text-center text-gray-400 text-xs sm:text-sm">
+            <div class="border-t border-gray-800 mt-8 sm:mt-10 lg:mt-12 pt-6 sm:pt-8 text-center text-gray-400 text-sm">
                 <p>© 2025 Nundys. All rights reserved.</p>
             </div>
         </div>

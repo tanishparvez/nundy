@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services - Nundys</title>
+    <title>Contact - Nundys</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
@@ -48,8 +48,8 @@
                 <a href="./product.html" class="text-gray-900 hover:text-primary text-sm lg:text-base">Products</a>
                 <a href="./clientele.html" class="text-gray-900 hover:text-primary text-sm lg:text-base">Clientele</a>
                 <a href="./gallery.html" class="text-gray-900 hover:text-primary text-sm lg:text-base">Gallery</a>
-                <a href="./service.html" class="text-primary text-sm lg:text-base">Services</a>
-               
+                <a href="./service.html" class="text-gray-900 hover:text-primary text-sm lg:text-base">Services</a>
+                
                 <a href="./careers.html" class="text-gray-900 hover:text-primary text-sm lg:text-base">Careers</a>
                 <button
                     class="bg-primary text-white px-4 py-1.5 sm:px-6 sm:py-2 rounded-button hover:bg-opacity-90 text-sm"
@@ -68,9 +68,10 @@
                 <a href="./product.html" class="text-gray-900 hover:text-primary text-base">Products</a>
                 <a href="./clientele.html" class="text-gray-900 hover:text-primary text-base">Clientele</a>
                 <a href="./gallery.html" class="text-gray-900 hover:text-primary text-base">Gallery</a>
-                <a href="./service.html" class="text-primary text-base">Services</a>
+                <a href="./service.html" class="text-gray-900 hover:text-primary text-base">Services</a>
+                
                 <a href="./careers.html" class="text-gray-900 hover:text-primary text-base">Careers</a>
-               <button class="bg-primary text-white px-6 py-2 rounded-button hover:bg-opacity-90 text-sm"
+                <button class="bg-primary text-white px-6 py-2 rounded-button hover:bg-opacity-90 text-sm"
                     onclick="window.location.href='./contact.html'">
                     Contact Us
                 </button>
@@ -80,13 +81,13 @@
 
     <main class="pt-16 sm:pt-20 min-h-screen">
         <section class="relative h-[200px] sm:h-[300px] lg:h-[400px] overflow-hidden"
-            style="background-image: url('https://readdy.ai/api/search-image?query=modern%20furniture%20workshop%2C%20craftsmen%20at%20work%2C%20professional%20environment&width=1920&height=400&seq=30&orientation=landscape'); background-size: cover; background-position: center;">
+            style="background-image: url('https://readdy.ai/api/search-image?query=modern%20office%20reception%20with%20welcoming%20furniture%2C%20professional%20environment%2C%20natural%20light&width=1920&height=400&seq=40&orientation=landscape'); background-size: cover; background-position: center;">
             <div class="absolute inset-0 bg-black bg-opacity-50"></div>
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center relative">
                 <div class="max-w-full sm:max-w-2xl text-white">
-                    <h1 class="text-2xl sm:text-3xl lg:text-5xl font-bold mb-2 sm:mb-4">Our Services</h1>
+                    <h1 class="text-2xl sm:text-3xl lg:text-5xl font-bold mb-2 sm:mb-4">Contact Us</h1>
                     <p class="text-sm sm:text-base lg:text-xl">
-                        Delivering exceptional furniture solutions tailored to your needs
+                        We're here to help you create exceptional furniture solutions
                     </p>
                 </div>
             </div>
@@ -95,89 +96,69 @@
         <section class="py-10 sm:py-16 lg:py-20">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-8 sm:mb-12 lg:mb-16">
-                    <h2 class="text-xl sm:text-2xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-4">What We Offer</h2>
+                    <h2 class="text-xl sm:text-2xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-4">Get in Touch</h2>
                     <p class="text-gray-600 text-sm sm:text-base max-w-full sm:max-w-2xl mx-auto">
-                        From custom designs to sustainable manufacturing, our services cater to diverse industries with precision and care.
+                        Reach out to us for inquiries, collaborations, or to discuss your furniture needs.
                     </p>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16">
                     <div class="bg-white p-4 sm:p-6 lg:p-8 rounded-lg shadow-sm">
-                        <div class="w-12 sm:w-16 h-12 sm:h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-lg mb-4 sm:mb-6">
-                            <i class="ri-pencil-ruler-2-line text-xl sm:text-2xl text-primary"></i>
-                        </div>
-                        <h3 class="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 sm:mb-4">Custom Furniture Design</h3>
-                        <p class="text-gray-600 text-sm sm:text-base">
-                            Collaborate with our design team to create bespoke furniture tailored to your vision and space.
-                        </p>
+                        <h3 class="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-4 sm:mb-6">Send Us a Message</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm sm:text-base text-gray-900 mb-1">Name</label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary text-sm sm:text-base"
+                                    placeholder="Your Name" />
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm sm:text-base text-gray-900 mb-1">Email</label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary text-sm sm:text-base"
+                                    placeholder="Your Email" />
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm sm:text-base text-gray-900 mb-1">Phone</label>
+                                <input type="tel" id="phone" name="phone"
+                                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary text-sm sm:text-base"
+                                    placeholder="Your Phone Number" />
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm sm:text-base text-gray-900 mb-1">Message</label>
+                                <textarea id="message" name="message" required rows="4"
+                                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary text-sm sm:text-base"
+                                    placeholder="Your Message"></textarea>
+                            </div>
+                            <button type="submit"
+                                class="bg-primary text-white px-6 sm:px-8 py-2 sm:py-3 rounded-button hover:bg-opacity-90 text-sm sm:text-base">
+                                Send Message
+                            </button>
+                        </form>
                     </div>
-                    <div class="bg-white p-4 sm:p-6 lg:p-8 rounded-lg shadow-sm">
-                        <div class="w-12 sm:w-16 h-12 sm:h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-lg mb-4 sm:mb-6">
-                            <i class="ri-tools-line text-xl sm:text-2xl text-primary"></i>
-                        </div>
-                        <h3 class="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 sm:mb-4">Furniture Manufacturing</h3>
-                        <p class="text-gray-600 text-sm sm:text-base">
-                            High-quality craftsmanship using advanced technology and sustainable materials.
-                        </p>
-                    </div>
-                    <div class="bg-white p-4 sm:p-6 lg:p-8 rounded-lg shadow-sm">
-                        <div class="w-12 sm:w-16 h-12 sm:h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-lg mb-4 sm:mb-6">
-                            <i class="ri-truck-line text-xl sm:text-2xl text-primary"></i>
-                        </div>
-                        <h3 class="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 sm:mb-4">Installation & Delivery</h3>
-                        <p class="text-gray-600 text-sm sm:text-base">
-                            Seamless delivery and professional installation for hassle-free project completion.
-                        </p>
-                    </div>
-                    <div class="bg-white p-4 sm:p-6 lg:p-8 rounded-lg shadow-sm">
-                        <div class="w-12 sm:w-16 h-12 sm:h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-lg mb-4 sm:mb-6">
-                            <i class="ri-leaf-line text-xl sm:text-2xl text-primary"></i>
-                        </div>
-                        <h3 class="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 sm:mb-4">Sustainable Practices</h3>
-                        <p class="text-gray-600 text-sm sm:text-base">
-                            Eco-friendly materials and processes to minimize environmental impact.
-                        </p>
-                    </div>
-                    <div class="bg-white p-4 sm:p-6 lg:p-8 rounded-lg shadow-sm">
-                        <div class="w-12 sm:w-16 h-12 sm:h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-lg mb-4 sm:mb-6">
-                            <i class="ri-customer-service-2-line text-xl sm:text-2xl text-primary"></i>
-                        </div>
-                        <h3 class="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 sm:mb-4">After-Sales Support</h3>
-                        <p class="text-gray-600 text-sm sm:text-base">
-                            Dedicated support for maintenance, repairs, and customer satisfaction.
-                        </p>
-                    </div>
-                    <div class="bg-white p-4 sm:p-6 lg:p-8 rounded-lg shadow-sm">
-                        <div class="w-12 sm:w-16 h-12 sm:h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-lg mb-4 sm:mb-6">
-                            <i class="ri-building-2-line text-xl sm:text-2xl text-primary"></i>
-                        </div>
-                        <h3 class="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 sm:mb-4">Commercial Fitouts</h3>
-                        <p class="text-gray-600 text-sm sm:text-base">
-                            Comprehensive solutions for offices, hotels, and retail spaces.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-gray-50 py-10 sm:py-16 lg:py-20">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-8 sm:mb-12 lg:mb-16">
-                    <h2 class="text-xl sm:text-2xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-4">Our Craftsmanship</h2>
-                    <p class="text-gray-600 text-sm sm:text-base max-w-full sm:max-w-2xl mx-auto">
-                        Experience the artistry and dedication behind every piece we create.
-                    </p>
-                </div>
-                <div class="bg-white rounded-lg shadow-sm">
-                    <div class="flex flex-col md:flex-row items-center">
-                        <div class="md:w-1/2">
-                            <img src="https://readdy.ai/api/search-image?query=modern%20furniture%20craftsmanship%2C%20artisan%20working%20on%20wooden%20furniture%2C%20detailed%20process&width=600&height=400&seq=31&orientation=landscape"
-                                alt="Craftsmanship" class="w-full h-48 sm:h-64 md:h-80 object-cover rounded-lg md:rounded-r-none" />
-                        </div>
-                        <div class="md:w-1/2 p-4 sm:p-6 lg:p-8">
-                            <h3 class="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-2 sm:mb-4">Handcrafted Excellence</h3>
-                            <p class="text-gray-600 text-sm sm:text-base">
-                                At Nundys, every piece of furniture is a testament to our commitment to quality. Our artisans combine traditional techniques with modern innovation to craft furniture that is both functional and beautiful. From selecting sustainable materials to meticulous finishing, we ensure every detail reflects our passion for excellence, delivering timeless pieces that elevate your spaces.
-                            </p>
+                    <div>
+                        <h3 class="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-4 sm:mb-6">Contact Information</h3>
+                        <ul class="space-y-4 text-sm sm:text-base text-gray-600">
+                            <li class="flex items-start">
+                                <i class="ri-map-pin-2-line text-xl sm:text-2xl text-primary mr-3"></i>
+                                <span>123 Furniture Street, Kolkata, West Bengal, India</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-phone-line text-xl sm:text-2xl text-primary mr-3"></i>
+                                <a href="tel:+911234567890" class="hover:text-primary">+91 33 2226 9301</a>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-mail-line text-xl sm:text-2xl text-primary mr-3"></i>
+                                <a href="mailto:admin@nundys.com" class="hover:text-primary">admin@nundys.com</a>
+                            </li>
+                        </ul>
+                        <div class="mt-6 sm:mt-8">
+                            <h4 class="text-sm sm:text-base font-bold text-gray-900 mb-2 sm:mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-gray-600 hover:text-primary"><i class="ri-facebook-fill text-xl sm:text-2xl"></i></a>
+                                <a href="#" class="text-gray-600 hover:text-primary"><i class="ri-twitter-fill text-xl sm:text-2xl"></i></a>
+                                <a href="#" class="text-gray-600 hover:text-primary"><i class="ri-instagram-line text-xl sm:text-2xl"></i></a>
+                                <a href="#" class="text-gray-600 hover:text-primary"><i class="ri-linkedin-fill text-xl sm:text-2xl"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -187,12 +168,12 @@
         <section class="bg-gray-50 py-10 sm:py-16 lg:py-20">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-full sm:max-w-3xl mx-auto text-center">
-                    <h2 class="text-xl sm:text-2xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">Partner with Us</h2>
+                    <h2 class="text-xl sm:text-2xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">Ready to Collaborate?</h2>
                     <p class="text-gray-600 text-sm sm:text-base mb-6 sm:mb-8">
-                        Let us bring your vision to life with our expert furniture solutions
+                        Let’s create exceptional furniture solutions for your business
                     </p>
                     <button class="bg-primary text-white px-6 sm:px-8 py-2 sm:py-3 rounded-button hover:bg-opacity-90 text-sm sm:text-base">
-                        Contact Us
+                        Get Started
                     </button>
                 </div>
             </div>
