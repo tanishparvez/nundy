@@ -43,20 +43,24 @@
         #mobile-menu {
             display: none;
         }
+
         #mobile-menu.active {
             display: flex;
             flex-direction: column;
             position: absolute;
-            top: 64px; /* Base value for mobile */
+            top: 64px;
+            /* Base value for mobile */
             left: 0;
             right: 0;
             background: white;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             z-index: 40;
         }
+
         @media (min-width: 640px) {
             #mobile-menu.active {
-                top: 80px; /* Adjusted for sm breakpoint */
+                top: 80px;
+                /* Adjusted for sm breakpoint */
             }
         }
 
@@ -64,9 +68,11 @@
             #mobile-menu {
                 display: none !important;
             }
+
             .desktop-nav {
                 display: flex;
             }
+
             #menu-toggle {
                 display: none;
             }
@@ -78,6 +84,32 @@
             align-items: center;
             overflow: visible;
         }
+
+        /* Reel size (1080x1920 pixels, 9:16 aspect ratio) for videos */
+        .reel-container {
+            position: relative;
+            width: 100%;
+            max-width: 1080px;
+            /* Maximum width to match 1080px */
+            aspect-ratio: 9 / 16;
+            /* Enforce 9:16 aspect ratio */
+            max-height: 1920px;
+            /* Maximum height to match 1920px */
+            overflow: hidden;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .reel-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            /* Match Tailwind's rounded-lg */
+        }
     </style>
 </head>
 
@@ -85,41 +117,42 @@
     <header class="fixed w-full top-0 z-50 bg-white shadow-sm">
         <nav class="container mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
             <a href="./index.html" class="logo-container">
-                <img src="./Image/logo.png"
-                     alt="Nundys Logo"
-                     class="h-12 sm:h-16 md:h-20 w-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] object-contain"
-                     onerror="this.src='https://via.placeholder.com/240x80?text=Nundys+Logo';"
-                     loading="lazy" />
+                <img src="./Image/logo.png" alt="Nundys Logo"
+                    class="h-12 sm:h-16 md:h-20 w-auto max-w-[160px] sm:max-w-[200px] md:max-w-[240px] object-contain"
+                    onerror="this.src='https://via.placeholder.com/240x80?text=Nundys+Logo';" loading="lazy" />
             </a>
             <button class="md:hidden text-gray-900 text-2xl focus:outline-none" id="menu-toggle">
                 <i class="ri-menu-line"></i>
             </button>
             <div class="desktop-nav hidden md:flex items-center space-x-4 lg:space-x-8">
-                <a href="/" class="text-gray-900 hover:text-primary text-sm lg:text-base">Home</a>
-                <a href="/about" class="text-gray-900 hover:text-primary text-sm lg:text-base">About</a>
-                <a href="/products" class="text-gray-900 hover:text-primary text-sm lg:text-base">Products</a>
-                <a href="/clientele" class="text-gray-900 hover:text-primary text-sm lg:text-base">Clientele</a>
-                <a href="/gallery" class="text-gray-900 hover:text-primary text-sm lg:text-base">Gallery</a>
-                <a href="/projects" class="text-primary text-sm lg:text-base">Projects</a>
-                <a href="/contact" class="text-gray-900 hover:text-primary text-sm lg:text-base">Contact</a>
-                <button class="bg-primary text-white px-4 lg:px-6 py-1.5 lg:py-2 !rounded-button hover:bg-opacity-90 text-sm lg:text-base">
-                    Get Started
+                <a href="./index.html" class="text-gray-900 hover:text-primary text-sm lg:text-base">Home</a>
+                <a href="./about.html" class="text-gray-900 hover:text-primary text-sm lg:text-base">About</a>
+                <a href="./product.html" class="text-gray-900 hover:text-primary text-sm lg:text-base">Products</a>
+                <a href="./clientele.html" class="text-gray-900 hover:text-primary text-sm lg:text-base">Clientele</a>
+                <a href="./gallery.html" class="text-gray-900 hover:text-primary text-sm lg:text-base">Gallery</a>
+                <a href="./project.html" class="text-primary text-sm lg:text-base">Projects</a>
+                <a href="./contact.html">
+                <button
+                    class="bg-primary text-white px-4 lg:px-6 py-1.5 lg:py-2 !rounded-button hover:bg-opacity-90 text-sm lg:text-base">
+                    Contact
                 </button>
+                </a>
             </div>
         </nav>
         <div id="mobile-menu" class="md:hidden bg-white shadow-sm">
             <div class="flex flex-col items-center space-y-4 py-4">
-                <a href="/" class="text-gray-900 hover:text-primary text-base">Home</a>
-                <a href="/about" class="text-gray-900 hover:text-primary text-base">About</a>
-                <a href="/products" class="text-gray-900 hover:text-primary text-base">Products</a>
-                <a href="/clientele" class="text-gray-900 hover:text-primary text-base">Clientele</a>
-                <a href="/gallery" class="text-gray-900 hover:text-primary text-base">Gallery</a>
-                <a href="/projects" class="text-primary text-base">Projects</a>
-                <a href="/contact" class="text-gray-900 hover:text-primary text-base">Contact</a>
-                <a href="./projects.html" class="text-gray-900 hover:text-primary text-base">Projects</a>
-                <button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 text-base w-full">
-                    Get Started
-                </button>
+                <a href="./index.html" class="text-gray-900 hover:text-primary text-base">Home</a>
+                <a href="/./about.html" class="text-gray-900 hover:text-primary text-base">About</a>
+                <a href="./product.html" class="text-gray-900 hover:text-primary text-base">Products</a>
+                <a href="./clientele.html" class="text-gray-900 hover:text-primary text-base">Clientele</a>
+                <a href="./gallery.html" class="text-gray-900 hover:text-primary text-base">Gallery</a>
+                <a href="./project.html" class="text-primary text-base">Projects</a>
+                <a href="./contact.html">
+                    <button
+                        class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 text-base w-full">
+                        Contact Us
+                    </button>
+                </a>
             </div>
         </div>
     </header>
@@ -140,324 +173,345 @@
 
         <section class="py-10 sm:py-16 lg:py-20">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-8 sm:mb-12 lg:mb-16">
-                    <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-2 sm:mb-4">Completed Projects</h2>
-                    <p class="text-gray-600 text-sm sm:text-base max-w-full sm:max-w-2xl mx-auto">
-                        Explore how Nundys has furnished modern spaces with innovative designs.
-                    </p>
+                <!-- Video Showcase Section -->
+                <div class="mb-12 sm:mb-16 lg:mb-20">
+                    <div class="text-center mb-8 sm:mb-12">
+                        <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-2 sm:mb-4">Video Showcase
+                        </h2>
+                        <p class="text-gray-600 text-sm sm:text-base max-w-full sm:max-w-2xl mx-auto">
+                            Watch our furniture solutions come to life in various settings.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+                        <div class="reel-container">
+                            <video controls aria-label="Corporate Office Tour Video">
+                                <source src="./Image/Projects/Welcome to Nundy.mp4" type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Corporate Office Tour</p>
+                        </div>
+                        <div class="reel-container">
+                            <video controls aria-label="University Library Setup Video">
+                                <source src="./Image/Projects/3.mp4" type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">University Library Setup</p>
+                        </div>
+                        <div class="reel-container">
+                            <video controls aria-label="Co-Working Space Design Video">
+                                <source src="./Image/Projects/2.mp4" type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Co-Working Space Design</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-                    <div class="relative">
-                        <img src="./Image/Projects/1.jpeg"
-                            alt="Corporate Office" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/2.jpeg"
-                            alt="University Library" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/3.jpeg"
-                            alt="Hospital Ward" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/4.jpg"
-                            alt="Co-Working Space" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                        
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/5.jpg"
-                            alt="Outdoor Cafe" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                        
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/6.jpg"
-                            alt="School Classroom" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/7.jpg"
-                            alt="Corporate Office" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/8.jpeg"
-                            alt="University Library" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/9.jpeg"
-                            alt="Hospital Ward" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/10.jpeg"
-                            alt="Co-Working Space" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                        
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/11.jpeg"
-                            alt="Outdoor Cafe" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                        
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/12.jpeg"
-                            alt="School Classroom" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/13.jpeg"
-                            alt="Corporate Office" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/14.jpeg"
-                            alt="University Library" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/15.jpg"
-                            alt="Hospital Ward" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/16.jpg"
-                            alt="Co-Working Space" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                        
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/17.jpg"
-                            alt="Outdoor Cafe" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                        
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/18.jpg"
-                            alt="School Classroom" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/19.jpg"
-                            alt="Corporate Office" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/20.jpg"
-                            alt="University Library" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/21.jpg"
-                            alt="Hospital Ward" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/22.jpg"
-                            alt="Co-Working Space" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                        
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/23.jpg"
-                            alt="Outdoor Cafe" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                        
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/24.jpg"
-                            alt="School Classroom" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/25.jpg"
-                            alt="Corporate Office" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/26.jpg"
-                            alt="University Library" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/27.jpg"
-                            alt="Hospital Ward" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/28.jpg"
-                            alt="Co-Working Space" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                        
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/29.jpg"
-                            alt="Outdoor Cafe" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                        
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/30.jpg"
-                            alt="School Classroom" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/31.jpg"
-                            alt="Corporate Office" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/32.jpg"
-                            alt="University Library" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/33.jpg"
-                            alt="Hospital Ward" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/34.jpeg"
-                            alt="Co-Working Space" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                        
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/35.jpeg"
-                            alt="Outdoor Cafe" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                        
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/36.jpeg"
-                            alt="School Classroom" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/37.jpeg"
-                            alt="Corporate Office" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/38.jpeg"
-                            alt="University Library" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/39.jpeg"
-                            alt="Hospital Ward" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/40.jpeg"
-                            alt="Co-Working Space" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                        
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/41.jpeg"
-                            alt="Corporate Office" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/42.jpeg"
-                            alt="University Library" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/43.jpeg"
-                            alt="Hospital Ward" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/44.jpeg"
-                            alt="Co-Working Space" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                        
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/45.jpeg"
-                            alt="Outdoor Cafe" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                        
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/46.jpeg"
-                            alt="School Classroom" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/47.jpeg"
-                            alt="Corporate Office" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/48.jpeg"
-                            alt="University Library" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/49.jpeg"
-                            alt="Hospital Ward" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/50.jpg"
-                            alt="Co-Working Space" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                        
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/51.jpg"
-                            alt="Corporate Office" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/52.jpg"
-                            alt="University Library" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/53.jpeg"
-                            alt="Hospital Ward" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/54.jpeg"
-                            alt="Co-Working Space" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                        
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/55.jpeg"
-                            alt="Outdoor Cafe" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                        
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/56.jpeg"
-                            alt="School Classroom" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/57.jpeg"
-                            alt="Corporate Office" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/58.jpeg"
-                            alt="University Library" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/59.jpeg"
-                            alt="Hospital Ward" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/60.jpeg"
-                            alt="Co-Working Space" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                        
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/61.jpeg"
-                            alt="Corporate Office" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/62.jpeg"
-                            alt="University Library" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/63.jpeg"
-                            alt="Hospital Ward" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/64.jpeg"
-                            alt="Co-Working Space" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                        
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/65.jpeg"
-                            alt="Outdoor Cafe" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                        
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/66.jpeg"
-                            alt="School Classroom" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/67.jpeg"
-                            alt="Corporate Office" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/68.jpeg"
-                            alt="University Library" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/69.jpeg"
-                            alt="Hospital Ward" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/70.jpeg"
-                            alt="Co-Working Space" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                        
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/71.jpeg"
-                            alt="Co-Working Space" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                        
-                    </div>
-                    <div class="relative">
-                        <img src="./Image/Projects/72.jpeg"
-                            alt="Co-Working Space" class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
-                        
+
+                <!-- Photo Gallery Section -->
+                <div>
+                    <div class="text-center mb-8 sm:mb-12">
+                        <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-2 sm:mb-4">Photo Gallery
+                        </h2>
+                        <p class="text-gray-600 text-sm sm:text-base max-w-full sm:max-w-2xl mx-auto">
+                            Explore our completed projects showcasing innovative furniture designs.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+                        <div class="relative">
+                            <img src="./Image/Projects/1.jpeg" alt="Corporate Office"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Corporate Office</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/2.jpeg" alt="University Library"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">University Library</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/4.jpg" alt="Co-Working Space"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Co-Working Space</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/5.jpg" alt="Outdoor Cafe"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Outdoor Cafe</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/6.jpg" alt="School Classroom"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">School Classroom</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/7.jpg" alt="Corporate Office"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Corporate Office</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/8.jpeg" alt="University Library"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">University Library</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/10.jpeg" alt="Co-Working Space"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Co-Working Space</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/11.jpeg" alt="Outdoor Cafe"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Outdoor Cafe</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/12.jpeg" alt="School Classroom"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">School Classroom</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/13.jpeg" alt="Corporate Office"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Corporate Office</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/14.jpeg" alt="University Library"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">University Library</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/16.jpg" alt="Co-Working Space"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Co-Working Space</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/17.jpg" alt="Outdoor Cafe"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Outdoor Cafe</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/18.jpg" alt="School Classroom"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">School Classroom</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/19.jpg" alt="Corporate Office"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Corporate Office</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/20.jpg" alt="University Library"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">University Library</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/22.jpg" alt="Co-Working Space"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Co-Working Space</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/23.jpg" alt="Outdoor Cafe"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Outdoor Cafe</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/24.jpg" alt="School Classroom"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">School Classroom</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/25.jpg" alt="Corporate Office"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Corporate Office</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/26.jpg" alt="University Library"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">University Library</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/28.jpg" alt="Co-Working Space"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Co-Working Space</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/29.jpg" alt="Outdoor Cafe"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Outdoor Cafe</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/30.jpg" alt="School Classroom"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">School Classroom</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/31.jpg" alt="Corporate Office"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Corporate Office</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/32.jpg" alt="University Library"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">University Library</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/34.jpeg" alt="Co-Working Space"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Co-Working Space</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/35.jpeg" alt="Outdoor Cafe"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Outdoor Cafe</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/36.jpeg" alt="School Classroom"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">School Classroom</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/37.jpeg" alt="Corporate Office"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Corporate Office</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/38.jpeg" alt="University Library"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">University Library</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/40.jpeg" alt="Co-Working Space"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Co-Working Space</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/41.jpeg" alt="Corporate Office"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Corporate Office</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/42.jpeg" alt="University Library"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">University Library</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/44.jpeg" alt="Co-Working Space"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Co-Working Space</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/45.jpeg" alt="Outdoor Cafe"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Outdoor Cafe</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/46.jpeg" alt="School Classroom"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">School Classroom</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/47.jpeg" alt="Corporate Office"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Corporate Office</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/48.jpeg" alt="University Library"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">University Library</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/50.jpg" alt="Co-Working Space"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Co-Working Space</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/51.jpg" alt="Corporate Office"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Corporate Office</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/52.jpg" alt="University Library"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">University Library</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/54.jpeg" alt="Co-Working Space"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Co-Working Space</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/55.jpeg" alt="Outdoor Cafe"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Outdoor Cafe</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/56.jpeg" alt="School Classroom"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">School Classroom</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/57.jpeg" alt="Corporate Office"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Corporate Office</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/58.jpeg" alt="University Library"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">University Library</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/60.jpeg" alt="Co-Working Space"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Co-Working Space</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/61.jpeg" alt="Corporate Office"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Corporate Office</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/62.jpeg" alt="University Library"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">University Library</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/64.jpeg" alt="Co-Working Space"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Co-Working Space</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/65.jpeg" alt="Outdoor Cafe"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Outdoor Cafe</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/66.jpeg" alt="School Classroom"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">School Classroom</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/67.jpeg" alt="Corporate Office"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Corporate Office</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/68.jpeg" alt="University Library"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">University Library</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/70.jpeg" alt="Co-Working Space"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Co-Working Space</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/71.jpeg" alt="Co-Working Space"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Co-Working Space</p>
+                        </div>
+                        <div class="relative">
+                            <img src="./Image/Projects/72.jpeg" alt="Co-Working Space"
+                                class="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-lg" loading="lazy" />
+                            <p class="mt-2 text-sm sm:text-base text-gray-900 text-center">Co-Working Space</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -466,13 +520,17 @@
         <section class="bg-gray-50 py-10 sm:py-16 lg:py-20">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-full sm:max-w-3xl mx-auto text-center">
-                    <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">Start Your Project</h2>
+                    <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">Start Your Project
+                    </h2>
                     <p class="text-gray-600 text-sm sm:text-base mb-6 sm:mb-8">
                         Let’s create tailored furniture solutions for your space. Contact us today!
                     </p>
-                    <button class="bg-primary text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-3 !rounded-button hover:bg-opacity-90 text-sm sm:text-base">
+                    <a href="./contact.html">
+                    <button
+                        class="bg-primary text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-3 !rounded-button hover:bg-opacity-90 text-sm sm:text-base">
                         Contact Us
                     </button>
+                    </a>
                 </div>
             </div>
         </section>
@@ -483,11 +541,9 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
                 <div>
                     <a href="/" class="mb-4 sm:mb-6 block">
-                        <img src="./Image/logo.png"
-                             alt="Nundys Logo"
-                             class="h-10 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain"
-                             onerror="this.src='https://via.placeholder.com/160x60?text=Nundys+Logo';"
-                             loading="lazy" />
+                        <img src="./Image/logo.png" alt="Nundys Logo"
+                            class="h-10 sm:h-12 md:h-16 w-auto max-w-[120px] sm:max-w-[160px] object-contain"
+                            onerror="this.src='https://via.placeholder.com/160x60?text=Nundys+Logo';" loading="lazy" />
                     </a>
                     <p class="text-gray-400 text-xs sm:text-sm">
                         Leading manufacturer of modern furniture since 1978
@@ -521,13 +577,15 @@
                     <div class="flex flex-col sm:flex-row">
                         <input type="email" placeholder="Enter your email"
                             class="flex-1 px-3 sm:px-4 py-2 !rounded-button sm:rounded-r-none text-gray-900 text-xs sm:text-sm mb-2 sm:mb-0" />
-                        <button class="bg-primary px-3 sm:px-4 py-2 !rounded-button sm:rounded-l-none hover:bg-opacity-90 text-xs sm:text-sm">
+                        <button
+                            class="bg-primary px-3 sm:px-4 py-2 !rounded-button sm:rounded-l-none hover:bg-opacity-90 text-xs sm:text-sm">
                             Subscribe
                         </button>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-8 sm:mt-10 lg:mt-12 pt-6 sm:pt-8 text-center text-gray-400 text-xs sm:text-sm">
+            <div
+                class="border-t border-gray-800 mt-8 sm:mt-10 lg:mt-12 pt-6 sm:pt-8 text-center text-gray-400 text-xs sm:text-sm">
                 <p>© 2025 Nundys. All rights reserved.</p>
             </div>
         </div>
